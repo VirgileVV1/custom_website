@@ -1,0 +1,29 @@
+#menu {
+    border-radius: 20px;
+    padding: 30px 20px;
+    position: fixed;
+}
+
+.menu-item {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 600;
+    position: relative;
+}
+
+.menu-item::after {
+    content: '';
+    background: var(--custom-yellow);
+    height: 3px;
+    width: 50%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.menu-item img {
+    width: 10px;
+}
+
+ul.lst-none {
+    list-style-type: none;
+}
