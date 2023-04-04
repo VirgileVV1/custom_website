@@ -11,14 +11,27 @@
 
         
             <ul class="lst-none">
-                <li class="menu-item d-flex justify-content-between"> <p> Mes Documents </p> <img class="" src="/custom_website/static/src/img/fleche.png"/> </li>
-                <li class="menu-item d-flex justify-content-between"> <p> Mes Cours </p> <img class="" src="/custom_website/static/src/img/fleche.png"/> </li>
-                <li class="menu-item d-flex justify-content-between"> <p> Mon Profil </p> <img class="" src="/custom_website/static/src/img/fleche.png"/> </li>
+                <li class="menu-item d-flex justify-content-between"> 
+                    <a id="docs" class="d-flex fex-row justify-content-between" onclick="menuAction(this.id)" > <p style="margin:0px;"> Mes Documents </p> <div> <img id="docs-arrow" src="/custom_website/static/src/img/fleche.png"/> </div> </a>      
+                </li>
+                <li id="docs-sub-menu" class="my-2 sub-menu">
+                    <ul>
+                        <li> <a href="my/invoices"> Mes factures </a> </li>
+                        <li> <a href=""> Mes devis </a> </li>
+                    </ul>
+                </li>
+                <li class="menu-item d-flex justify-content-between"> 
+                    <a id="courses" class="d-flex fex-row justify-content-between" onclick="menuAction(this.id)" > <p style="margin:0px;"> Mes Cours </p>  <div> <img  id="courses-arrow" src="/custom_website/static/src/img/fleche.png"/> </div> </a>  
+                </li>
+                <li class="menu-item d-flex justify-content-between"> 
+                    <a href="/my/home" id="profile" class="d-flex fex-row justify-content-between" onclick="menuAction(this.id)" > <p style="margin:0px;"> Mon Profil </p> </a>  
+                </li>
             </ul>
         </div>
 
     
         <link rel="stylesheet" type="text/css" href="/custom_website/static/src/css/menu.css"/>
+        <script src="/custom_website/static/src/js/menu.js"> </script>
     </template>
 
 <data>

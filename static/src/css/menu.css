@@ -9,6 +9,13 @@
     font-size: 0.9em;
     font-weight: 600;
     position: relative;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.menu-item a {
+    width: 100%;
+    color: black;
 }
 
 .menu-item::after {
@@ -21,9 +28,14 @@
 }
 
 .menu-item img {
-    width: 10px;
+    width: 15px;
+    transform: rotate(180deg);
 }
 
 ul.lst-none {
     list-style-type: none;
+}
+
+.sub-menu {
+    display: none;
 }
