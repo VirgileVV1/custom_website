@@ -16,8 +16,8 @@
                 </li>
                 <li id="docs-sub-menu" class="my-2 sub-menu">
                     <ul>
-                        <li> <a href="my/invoices"> Mes factures </a> </li>
-                        <li> <a href=""> Mes devis </a> </li>
+                        <li> <a href="invoices"> Mes factures </a> </li>
+                        <li> <a href="quotes"> Mes devis </a> </li>
                     </ul>
                 </li>
                 <li class="menu-item d-flex justify-content-between"> 

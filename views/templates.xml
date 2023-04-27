@@ -3,18 +3,19 @@
 <odoo>
     
     <!-- template pour le fil d'ariane -->
-    <template id="portal_my_home_menu_invoice2" name="Portal layout : invoice menu entries" inherit_id="portal.portal_breadcrumbs" priority="30">
+    <template id="portal_breadcrumbs" inherit_id="portal.portal_breadcrumbs" name="Portal layout : invoice menu entries"  priority="30">
 
         <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
-            
+            <li t-if="page_name == 'my_home'" class='breadcrumb-item'> Profil </li> 
+            <!--
             <t t-foreach="ariane_pages" t-as="page">
                 <t t-set= "link" t-value="page['link']" ></t> 
 
                 <li t-attf-class="breadcrumb-item">
                     <a t-attf-href="{{page['link']}}" > <t t-esc="page['title']" /> </a>
                 </li>     
-           
             </t>
+            -->
         </xpath>
     </template>
 
@@ -29,18 +30,18 @@
     <!--<t t-call="custom_website.portal_my_home_menu_invoice2"/>-->
 
 
-      <div class="container d-flex flex-row justify-content-between mt-3">
+      <div class="container d-flex flex-row justify-content-between mt-2">
 
         <!-- Import du menu -->
         <t t-if="menu" >
-          <div class="col-3">
+          <div id="menu_container" class="col-md-3">
             <t t-call="custom_website.menu"> </t>
           </div>
         </t>  
 
         <!-- Import de la page profil -->
-        <t t-if="page_name=='profile'">
-          <div id="profile" class="col-8">
+        <t t-if="page_name=='my_home'">
+          <div id="profile_container" class="col-12 col-xl-9">
           <t t-call="custom_website.profile"> </t>
           </div>
         </t>

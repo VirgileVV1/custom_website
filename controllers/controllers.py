@@ -22,12 +22,9 @@ class CustomWebsite(http.Controller):
                             "country": request.env.user.partner_id.country_id.name, #inutile
                             "company": request.env.user.company_id.name
                         }
-                
-        ariane_pages = [{"title":"Mon profil", "link":"/my/home"}, {"title":"Mon profil2", "link":"/my/home2"}]
-            
+                            
         parameters = {
-            "page_name":"profile",              # nom de la page
-            "ariane_pages":ariane_pages,        # liste des pages pour le fil d'ariane
+            "page_name":"my_home",              # nom de la page
             "menu":True,                        # est ce qu il y a un menu dans la page
             "connected_user":connected_user,    # informations de l'utilisateur 
         }
