@@ -29,7 +29,9 @@
                             <!--<img src="../web/image?model=res.users&amp;field=image_1920&amp;id=2" alt="Profile picture" width="150"/>-->
                             
                         </div>
-
+                        <div t-if="not connected_user['image_1920']" id="profile-picture">
+                            <img src="/base/static/img/avatar_grey.png" alt="Profile picture" width="150"/>                            
+                        </div>
                         <div t-if="connected_user['name']" class="big-text"> <b> <t t-esc="connected_user['name']"/> </b> </div>
 
                     </div>

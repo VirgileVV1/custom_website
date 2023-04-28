@@ -30,7 +30,7 @@
     <!--<t t-call="custom_website.portal_my_home_menu_invoice2"/>-->
 
 
-      <div class="container d-flex flex-row justify-content-between mt-2">
+      <div class="d-flex flex-row justify-content-between mt-2">
 
         <!-- Import du menu -->
         <t t-if="menu" >
@@ -41,7 +41,7 @@
 
         <!-- Import de la page profil -->
         <t t-if="page_name=='my_home'">
-          <div id="profile_container" class="col-12 col-xl-9">
+          <div id="profile_container" class="col-12 col-xl-8">
           <t t-call="custom_website.profile"> </t>
           </div>
         </t>
