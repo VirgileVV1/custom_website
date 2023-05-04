@@ -31,12 +31,12 @@
         'views/test.xml',
     ],
     #
-    #'assets': {
-        #'web.assets_frontend': [
-        #    'custom_website/static/src/css/profile.css',
+    'assets': {
+        'web.assets_frontend': [
+            'custom_website/static/src/js/api.js',
         #    'custom_website/static/src/css/profile2.css',
-        #],
-    #},
+        ],
+    },
     #
     # only loaded in demonstration mode
     'demo': [

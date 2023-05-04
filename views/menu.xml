@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <data></data>
+
     <template id="menu" name="Menu">
         <div id="menu" class="bg-white">
         
-            <div t-if="connected_user['name']" class="big-text"> 
-                <b> Bonjour <t t-esc="connected_user['name']"/>, </b> 
+            <div class="big-text"> 
+                <b t-if="connected_user" > Bonjour <t t-esc="connected_user['name']"/>, </b> 
+                <b t-if="not connected_user" id="b_username"> </b> 
                 <p> que souhaitez vous faire ? </p>
             </div>
 
@@ -31,9 +34,31 @@
 
     
         <link rel="stylesheet" type="text/css" href="/custom_website/static/src/css/menu.css"/>
+        <link rel="stylesheet" type="text/css" href="/custom_website/static/src/css/custom_style.css"/>
         <script src="/custom_website/static/src/js/menu.js"> </script>
     </template>
 
-<data>
-</data>
+  
+    <template id="web_assets_backend_ext" >
+        <xpath expr="." position="inside"> 
+            <script type="text/javascript" src="/custom_website/static/src/js/api.js"></script>
+        </xpath>
+    </template>
+
+   <!-- template pour le fil d'ariane -->
+    <template id="portal_table_attributes" inherit_id="portal.portal_table" name="Portal layout : invoice menu entries"  priority="30">
+         <xpath expr="//*[hasclass('o_portal_my_doc_table')]//ancestor::div" position="attributes">
+            <attribute name="class" add="d-flex flex-column" separator=" "/>
+        </xpath>
+    </template>
+
+
+    <template id="portal_invoices_menu" inherit_id="portal.portal_table" name="Portal layout : invoices menu"  priority="30">   
+        <xpath expr="//*[hasclass('o_portal_my_doc_table')]//ancestor::div" position="before">
+            <div id="menu_container" class="col-md-3">
+                <t t-call="custom_website.menu"> </t>
+            </div>
+            <!--<script type="text/javascript" src="/custom_website/static/src/js/menu.js"></script>-->
+        </xpath>
+    </template>
 </odoo>

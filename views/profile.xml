@@ -18,10 +18,6 @@
                 <!-- Part for personnal informations -->
                 <div class="d-flex border content">
 
-                    <a id="btn-edit-profile" class="px-3 btn" href="/my/account"> 
-                     Modifier 
-                    </a>
-
                     <div  class="d-flex flex-column align-items-center justify-center col-5">
                         <div t-if="connected_user['image_1920']" id="profile-picture">
                             <img t-att-src="'data:image/png;base64,%s' % connected_user['image_1920'].decode('utf-8')" alt="Profile picture" width="150"/>
@@ -63,6 +59,10 @@
                         </div>
 
                     </div>
+
+                    <a id="btn-edit-profile" class="px-3 btn" href="/my/account"> 
+                     Modifier 
+                    </a>
 
                 </div>
 

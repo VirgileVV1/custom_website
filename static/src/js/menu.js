@@ -35,3 +35,38 @@ function menuAction(id) {
         }
     }  
 }
+
+document.addEventListener('DOMContentLoaded', ()=> {
+    mooveInvoiceTable()
+})
+
+function mooveInvoiceTable() {
+    console.log("test")
+    //var session = require('web.session');
+    //console.log(session)
+    //user = session.uid
+    //console.log(user)
+    let container = document.getElementById('wrap').childNodes[1]
+    
+    div = document.createElement('div')
+    div.classList.add("d-flex")
+    div.classList.add("justify-content-between")
+    div.classList.add("col-12")
+
+    /* menu */
+    div.appendChild(container.childNodes[3])
+    
+    /* table */
+    container.childNodes[4].classList.add("col-12")
+    container.childNodes[4].classList.add("col-xl-70")  
+    div.appendChild(container.childNodes[4])
+    
+    console.log(container.firstChild)
+    container.childNodes[1].after(div)
+    /*container.insertAfter(div, container.firstChild);*/ 
+    console.log(container)
+
+}
+
+
+

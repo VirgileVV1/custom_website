@@ -61,4 +61,19 @@
     #menu_container {
         display: flex;
     }
+
+    .col-xl-70 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 70%; 
+    }
+}
+
+.big-text {
+    font-size: 1.3em;
+}
+
+.fa-home {
+    color: var(--custom-yellow);
 }

@@ -4,18 +4,8 @@
     
     <!-- template pour le fil d'ariane -->
     <template id="portal_breadcrumbs" inherit_id="portal.portal_breadcrumbs" name="Portal layout : invoice menu entries"  priority="30">
-
         <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
-            <li t-if="page_name == 'my_home'" class='breadcrumb-item'> Profil </li> 
-            <!--
-            <t t-foreach="ariane_pages" t-as="page">
-                <t t-set= "link" t-value="page['link']" ></t> 
-
-                <li t-attf-class="breadcrumb-item">
-                    <a t-attf-href="{{page['link']}}" > <t t-esc="page['title']" /> </a>
-                </li>     
-            </t>
-            -->
+            <li t-if="page_name == 'my_home'" class='breadcrumb-item active'> Profil </li> 
         </xpath>
     </template>
 
@@ -41,7 +31,7 @@
 
         <!-- Import de la page profil -->
         <t t-if="page_name=='my_home'">
-          <div id="profile_container" class="col-12 col-xl-8">
+          <div id="profile_container" class="col-12 col-xl-70 p-0">
           <t t-call="custom_website.profile"> </t>
           </div>
         </t>
