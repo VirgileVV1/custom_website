@@ -20,7 +20,7 @@
     <!--<t t-call="custom_website.portal_my_home_menu_invoice2"/>-->
 
 
-      <div class="d-flex flex-row justify-content-between mt-2">
+      <div id="portal_container" class="d-flex flex-column justify-content-between mt-2 ">
 
         <!-- Import du menu -->
         <t t-if="menu" >

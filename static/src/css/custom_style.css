@@ -53,10 +53,30 @@
 }
 
 #menu_container {
-    display: none;
+    /*display: none;*/
+}
+
+
+
+.big-text {
+    font-size: 1.3em;
+}
+
+.fa-home {
+    color: var(--custom-yellow);
 }
 
 @media screen and (min-width: 1200px) {
+
+    #welcome_msg_container {
+        font-size: 1.3em;
+        display: flex !important;
+        flex-direction: column !important;  
+    }
+
+    #welcome_arrow_container {
+        display: none;
+    }
 
     #menu_container {
         display: flex;
@@ -68,12 +88,14 @@
         flex: 0 0 auto;
         width: 70%; 
     }
+
+    #portal_container {
+        display: flex !important;
+        flex-direction: row !important;
+    }
 }
 
-.big-text {
-    font-size: 1.3em;
+#welcome_msg_container {
+    cursor: pointer;
 }
 
-.fa-home {
-    color: var(--custom-yellow);
-}

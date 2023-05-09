@@ -2,7 +2,7 @@
 
 
 "Est ce que le menu est déplié ?"
-var is_menu_deployed = { docs:false, courses:false};
+var is_menu_expanded = { docs:false, courses:false, phone:false};
 
 function menuAction(id) {
     console.log(document.URL)
@@ -10,12 +10,12 @@ function menuAction(id) {
     img = document.getElementById(id+'-arrow')
     sub_menu = document.getElementById(id+'-sub-menu')
     console.log(sub_menu)
-    is_menu_deployed["docs"] = is_menu_deployed["docs"] ? false : true;
-    is_menu_deployed["courses"] = is_menu_deployed["courses"] ? false : true;
+    is_menu_expanded["docs"] = is_menu_expanded["docs"] ? false : true;
+    is_menu_expanded["courses"] = is_menu_expanded["courses"] ? false : true;
 
 
     if (id == "docs") {
-        if (is_menu_deployed["docs"]) {
+        if (is_menu_expanded["docs"]) {
             img.style.transform = "rotate(0deg)";
             sub_menu.style.display = "list-item";
         } else {
@@ -25,7 +25,7 @@ function menuAction(id) {
         }
     }
     else if (id == "courses") {
-        if (is_menu_deployed["courses"]) {
+        if (is_menu_expanded["courses"]) {
             img.style.transform = "rotate(0deg)";
             sub_menu.display = "list-item";
 
@@ -69,4 +69,12 @@ function mooveInvoiceTable() {
 }
 
 
-
+function expandMenu() {
+    if (is_menu_expanded["phone"] == false) {
+        document.getElementsByClassName("lst-none")[0].style.display = "block"
+        is_menu_expanded["phone"] = true
+    } else {
+        document.getElementsByClassName("lst-none")[0].style.display = "none"
+        is_menu_expanded["phone"] = false
+    }
+}
