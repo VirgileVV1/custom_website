@@ -24,7 +24,7 @@
 
         <!-- Import du menu -->
         <t t-if="menu" >
-          <div id="menu_container" class="col-md-3">
+          <div id="menu_container" class="col-xl-3 pb-2">
             <t t-call="custom_website.menu"> </t>
           </div>
         </t>  

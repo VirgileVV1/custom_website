@@ -5,9 +5,9 @@
 
     <template id="menu" name="Menu">
         <div id="menu" class="bg-white">
-        
-            <div id="welcome_msg_container" class="d-flex justify-content-between" onclick="expandMenu()" > 
-                <div class="d-flex">
+
+            <div id="welcome_msg_container" class="d-flex justify-content-center" onclick="expandMenu()" > 
+                <div class="d-flex flex-column">
                     <b t-if="connected_user" > Bonjour <t t-esc="connected_user['name']"/>, <![CDATA[&nbsp;]]> </b> 
                     <b t-if="not connected_user" id="b_username"> </b> 
                     <p> que souhaitez vous faire ? </p>
@@ -18,7 +18,7 @@
             </div>
 
         
-            <ul class="lst-none">
+            <ul class="lst-none p-0">
                 <li class="menu-item d-flex justify-content-between"> 
                     <a id="docs" class="d-flex fex-row justify-content-between" onclick="menuAction(this.id)" > <p style="margin:0px;"> Mes Documents </p> <div> <img id="docs-arrow" class="arrow" src="/custom_website/static/src/img/fleche.png"/> </div> </a>      
                 </li>
@@ -60,7 +60,7 @@
 
     <template id="portal_invoices_menu" inherit_id="portal.portal_table" name="Portal layout : invoices menu"  priority="30">   
         <xpath expr="//*[hasclass('o_portal_my_doc_table')]//ancestor::div" position="before">
-            <div id="menu_container" class="col-md-3">
+            <div id="menu_container" class="col-xl-3">
                 <t t-call="custom_website.menu"> </t>
             </div>
             <!--<script type="text/javascript" src="/custom_website/static/src/js/menu.js"></script>-->

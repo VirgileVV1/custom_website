@@ -70,11 +70,22 @@ function mooveInvoiceTable() {
 
 
 function expandMenu() {
-    if (is_menu_expanded["phone"] == false) {
+    if (window.innerWidth < 1200) {
+        if (is_menu_expanded["phone"] == false) {
+            document.getElementsByClassName("lst-none")[0].style.display = "block"
+            is_menu_expanded["phone"] = true
+        } else {
+            document.getElementsByClassName("lst-none")[0].style.display = "none"
+            is_menu_expanded["phone"] = false
+        }
+    }
+}
+
+window.onresize = reportWindowSize;
+
+function reportWindowSize() {
+    if (window.innerWidth >= 1200) {
         document.getElementsByClassName("lst-none")[0].style.display = "block"
         is_menu_expanded["phone"] = true
-    } else {
-        document.getElementsByClassName("lst-none")[0].style.display = "none"
-        is_menu_expanded["phone"] = false
     }
 }

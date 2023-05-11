@@ -1,6 +1,6 @@
 #menu {
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: 9px 6px;
     /* position: fixed; */
 }
 
@@ -37,11 +37,23 @@ ul.lst-none {
     display: none;
 }
 
+#welcome_arrow {
+    display: block;
+}
+
+
 @media screen and (min-width: 1200px) {
     ul.lst-none {
         display:  block;
     }
 
+    #menu {
+        padding: 30px 20px;
+    }
+
+    #welcome_arrow {
+        display: none;
+    }
 }
 
 .sub-menu {
