@@ -16,7 +16,7 @@
                 </div>
 
                 <!-- Part for personnal informations -->
-                <div class="d-flex border content">
+                <div id="profile-content" class="d-flex border content">
 
                     <div  class="d-flex flex-column align-items-center justify-center col-5">
                         <div t-if="connected_user['image_1920']" id="profile-picture">

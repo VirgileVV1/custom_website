@@ -1,5 +1,4 @@
 
-
 #profile-picture {
     border-radius:150px;
     overflow: hidden;
@@ -19,3 +18,21 @@
     font-weight: bold;
     border-radius: 5px;*/   
 }
+
+#profile-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* --------  PHONE  --------- */
+
+@media screen and (min-width: 600px) {
+    #profile-content {
+        flex-direction: row;
+        align-items: start;
+    }
+}
+
+
+

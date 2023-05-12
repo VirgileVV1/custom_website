@@ -22,7 +22,7 @@
     content: '';
     background: var(--custom-yellow);
     height: 3px;
-    width: 50%;
+    width: 90%;
     position: absolute;
     bottom: 0px;
 }
@@ -41,8 +41,18 @@ ul.lst-none {
     display: block;
 }
 
+.sub-menu {
+    height: 0%;
+}
 
+#welcome_msg_container {
+    cursor: pointer;
+}
+
+
+/* --------  TABLET  --------- */
 @media screen and (min-width: 1200px) {
+
     ul.lst-none {
         display:  block;
     }
@@ -54,9 +64,31 @@ ul.lst-none {
     #welcome_arrow {
         display: none;
     }
-}
 
-.sub-menu {
-    display: none;
+    #welcome_msg_container {
+        font-size: 1.3em;
+        display: flex !important;
+        flex-direction: column !important;  
+    }
+
+    #welcome_container {
+        display: none;
+    }
+
+    #menu_container {
+        display: flex;
+    }
+
+    .col-xl-70 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 70%; 
+    }
+
+    #portal_container {
+        display: flex !important;
+        flex-direction: row !important;
+    }
 }
 
