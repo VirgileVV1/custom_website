@@ -76,7 +76,9 @@ function mooveInvoiceTable() {
     div.classList.add("d-flex")
     div.classList.add("justify-content-between")
     div.classList.add("col-12")
-
+    div.classList.add("flex-column")
+    div.id = "portal_container"
+    
     /* menu */
     div.appendChild(container.childNodes[3])
     
