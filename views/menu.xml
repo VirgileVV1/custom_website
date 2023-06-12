@@ -58,19 +58,19 @@
         </xpath>
     </template>
 
-   <template id="portal_invoices_menu" inherit_id="portal.portal_table" name="Portal layout : invoices menu"  priority="30">   
+   <!--<<template id="portal_invoices_menu" inherit_id="portal.portal_table" name="Portal layout : invoices menu"  priority="30">   
         <xpath expr="//*[hasclass('o_portal_my_doc_table')]//ancestor::div" position="before">
 
             <p> test </p>
-            <!--<script type="text/javascript" src="/custom_website/static/src/js/menu.js"></script>-->
-        </xpath>
-    </template>
+        </xpath>    
+    </template>>-->
 
     <template id="portal_invoices_menu" inherit_id="portal.portal_table" name="Portal layout : invoices menu"  priority="30">   
         <xpath expr="//*[hasclass('o_portal_my_doc_table')]//ancestor::div" position="before">
 
             <div id="menu_container" class="col-xl-3 p-0 pb-2">
                 <t t-call="custom_website.menu"> </t>
+
             </div>
             <!--<script type="text/javascript" src="/custom_website/static/src/js/menu.js"></script>-->
         </xpath>

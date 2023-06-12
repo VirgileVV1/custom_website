@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'web'],
 
     # always loaded
     'data': [
@@ -34,7 +34,6 @@
     'assets': {
         'web.assets_frontend': [
             'custom_website/static/src/js/api.js',
-        #    'custom_website/static/src/css/profile2.css',
         ],
     },
     #
